@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Owais Manzoor - Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 8mm 10mm 8mm 10mm;
+    }
+
+    :root {
+      --primary: #0f172a;
+      --accent: #2563eb;
+      --text: #334155;
+      --text-muted: #64748b;
+      --border: #cbd5e1;
+      --bg: #ffffff;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background: #f8fafc;
+      line-height: 1.4;
+      font-size: 12.5px;
+      padding: 1.25rem;
+    }
+
+    .resume-card {
+      max-width: 840px;
+      margin: 0 auto;
+      background: var(--bg);
+      padding: 1.85rem 2.25rem;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      border: 1px solid var(--border);
+    }
+
+    .print-bar {
+      max-width: 840px;
+      margin: 0 auto 0.75rem auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .btn-print {
+      background: var(--accent);
+      color: white;
+      border: none;
+      padding: 0.45rem 1.1rem;
+      border-radius: 5px;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 0.85rem;
+    }
+
+    header {
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 0.5rem;
+      margin-bottom: 0.8rem;
+    }
+
+    h1 {
+      font-size: 1.95rem;
+      color: var(--primary);
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      text-transform: uppercase;
+      line-height: 1;
+    }
+
+    .subtitle {
+      font-size: 0.98rem;
+      color: var(--accent);
+      font-weight: 600;
+      margin-top: 0.2rem;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem 1.2rem;
+      margin-top: 0.4rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .contact-info a { color: var(--accent); text-decoration: none; }
+
+    section { margin-bottom: 0.8rem; }
+
+    h2 {
+      font-size: 0.9rem;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border-bottom: 1.5px solid var(--border);
+      padding-bottom: 0.2rem;
+      margin-bottom: 0.45rem;
+      font-weight: 700;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 145px 1fr;
+      gap: 0.3rem 0.8rem;
+      font-size: 0.86rem;
+    }
+
+    .skills-category { font-weight: 700; color: var(--primary); }
+
+    .job { margin-bottom: 0.55rem; }
+
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.15rem;
+    }
+
+    .job-title { font-weight: 700; color: var(--primary); font-size: 0.92rem; }
+    .job-company { font-weight: 600; color: var(--accent); }
+    .job-date { font-size: 0.8rem; color: var(--text-muted); }
+
+    ul { padding-left: 1.15rem; margin-top: 0.18rem; }
+    li { margin-bottom: 0.2rem; color: var(--text); font-size: 0.86rem; }
+
+    .live-link {
+      color: var(--accent);
+      font-weight: 600;
+      text-decoration: none;
+      margin-right: 0.8rem;
+      font-size: 0.82rem;
+    }
+    .live-link:hover { text-decoration: underline; }
+
+    /* ==========================================================================
+       OPTIMIZED SINGLE-PAGE A4 PRINT CSS (PERFECT TEXT SIZE & FULL PAGE FILL)
+       ========================================================================== */
+    @media print {
+      html, body {
+        width: 100% !important;
+        height: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        background: white !important;
+        font-size: 12.2px !important;
+        line-height: 1.38 !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+      
+      .print-bar { display: none !important; }
+
+      .resume-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        box-shadow: none !important;
+        border: none !important;
+      }
+
+      header {
+        padding-bottom: 0.45rem !important;
+        margin-bottom: 0.75rem !important;
+        border-bottom: 2px solid var(--primary) !important;
+      }
+
+      h1 { font-size: 1.9rem !important; line-height: 1 !important; margin-bottom: 0.12rem !important; }
+      .subtitle { font-size: 0.95rem !important; margin-top: 0.12rem !important; }
+      .contact-info { font-size: 0.82rem !important; margin-top: 0.35rem !important; gap: 0.3rem 1rem !important; }
+
+      section {
+        margin-bottom: 0.75rem !important;
+      }
+
+      section:last-of-type {
+        margin-bottom: 0 !important;
+      }
+
+      h2 {
+        font-size: 0.88rem !important;
+        margin-bottom: 0.38rem !important;
+        padding-bottom: 0.18rem !important;
+        border-bottom: 1.5px solid var(--border) !important;
+      }
+
+      p, li { font-size: 0.85rem !important; line-height: 1.36 !important; }
+      ul { margin-top: 0.15rem !important; padding-left: 1.1rem !important; }
+      li { margin-bottom: 0.18rem !important; }
+      
+      .skills-grid { font-size: 0.85rem !important; gap: 0.3rem 0.8rem !important; }
+      .job { margin-bottom: 0.5rem !important; }
+      .job:last-child { margin-bottom: 0 !important; }
+      .job-title { font-size: 0.9rem !important; }
+      .live-link { font-size: 0.78rem !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="print-bar">
+    <span style="font-weight:600; color: #475569;">📄 Owais Manzoor - Official Resume</span>
+    <button class="btn-print" onclick="window.print()">🖨️ Print / Save PDF</button>
+  </div>
+
+  <main class="resume-card">
+    <header>
+      <h1>Owais Manzoor</h1>
+      <div class="subtitle">Founder & Lead Systems Architect @ MON Labs | Full Stack, Mobile & CS Engineer</div>
+      <div class="contact-info">
+        <span>📍 Kulgam, J&K, India</span>
+        <span>📞 +91 9070505419</span>
+        <span>✉️ <a href="mailto:bhatowais419@gmail.com">bhatowais419@gmail.com</a></span>
+        <span>🔗 <a href="https://linkedin.com/in/owais-manzoor-ba9b52219" target="_blank">LinkedIn</a></span>
+        <span>🐙 <a href="https://github.com/Bhatowais454" target="_blank">GitHub</a></span>
+      </div>
+    </header>
+
+    <section>
+      <h2>Executive Summary</h2>
+      <p>
+        Versatile <strong>Software Engineer, Mobile Application Developer, and Founder of MON Labs</strong> holding an <strong>MSc IT</strong> and <strong>B.Sc. Computer Science</strong>. Demonstrates deep mastery of <strong>Data Structures & Algorithms (DSA)</strong>, <strong>Design & Analysis of Algorithms (DAA)</strong>, <strong>Operating Systems (OS)</strong>, <strong>Cryptography & Cybersecurity</strong>, and <strong>Machine Learning (ML)</strong>. Architect of enterprise billing/inventory ERPs, e-commerce platforms, cross-platform mobile apps (React Native/Expo), and EVM smart contracts for businesses, schools, and tech companies. Certified Systems & Hardware Technician.
+      </p>
+    </section>
+
+    <section>
+      <h2>Technical & Computer Science Mastery</h2>
+      <div class="skills-grid">
+        <div class="skills-category">CS Core & Security:</div>
+        <div>Data Structures & Algorithms (DSA), Design & Analysis of Algorithms (DAA), Operating Systems (OS), Cryptography & Cybersecurity, Machine Learning (ML)</div>
+
+        <div class="skills-category">Mobile & Full-Stack:</div>
+        <div>React Native, Expo (EAS), React 19, Next.js, Node.js, Express 5, Python, TypeScript, JavaScript (ES6+), C, C++, Java, Go, PHP, Tailwind v4</div>
+
+        <div class="skills-category">Databases & ERP:</div>
+        <div>PostgreSQL (pg-pool), Connection Pooling, Transactional Ledger Accounting, Redis Caching, MongoDB, RESTful Microservices, Cloudinary</div>
+
+        <div class="skills-category">Web3 & Hardware:</div>
+        <div>Solidity (ERC-721/20), Hardhat 3, Ethers.js, OpenZeppelin, Web3Auth, Solana, 6-Month Certified Computer Hardware & Systems Diagnostics</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Work Experience</h2>
+      <div class="job">
+        <div class="job-header">
+          <div><span class="job-title">Founder & Lead Systems Architect</span> — <span class="job-company">MON Labs</span></div>
+          <div class="job-date">Oct 2021 – Present</div>
+        </div>
+        <ul>
+          <li>Founded <strong>MON Labs</strong>, an independent software studio architecting custom enterprise software, mobile apps, and e-commerce platforms.</li>
+          <li>Engineered <strong>Novelty Arts Emporium Suite</strong>—integrating an E-Commerce Web Storefront, an Enterprise Billing/Inventory ERP, and an offline React Native mobile app.</li>
+          <li>Built cross-platform mobile builds deployed via Expo Application Services (EAS) with local database synchronization and automated `pg_dump` backups.</li>
+          <li>Built and deployed <strong>PomoVerse E-Nursery</strong> full-stack e-commerce web platform backed by PostgreSQL & Redis caching for sub-20ms query speeds.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header">
+          <div><span class="job-title">Blockchain & Smart Contract Engineer</span> — <span class="job-company">Meta-Z</span></div>
+          <div class="job-date">June 2023 – Sept 2023</div>
+        </div>
+        <ul>
+          <li>Architected EVM smart contracts in Solidity for Meta-Z blockchain, implementing cryptographic hashing and DAA gas optimizations (18% gas reduction).</li>
+          <li>Built real-time Ethers.js and Node.js transaction indexers syncing on-chain events with PostgreSQL databases. Achieved 95%+ Hardhat test coverage.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Featured MON Labs Live Production Projects</h2>
+      <div class="job">
+        <div class="job-header">
+          <div class="job-title">1. Novelty Arts Emporium — E-Commerce Web Portal, Enterprise ERP & Mobile App</div>
+        </div>
+        <div style="margin-bottom: 0.15rem;">
+          <a class="live-link" href="https://novelty-arts-emporium-pads.vercel.app/" target="_blank">🌐 Live E-Commerce Web</a>
+          <a class="live-link" href="https://novelty-arts-emporium-pads.vercel.app/#/" target="_blank">💼 Live ERP Portal</a>
+          <a class="live-link" href="https://expo.dev/accounts/bhatowais419s-team/projects/dev-owais/builds/2ce4cfb5-1224-457c-a19d-b71e3142ee81" target="_blank">📱 Live Mobile Expo Build</a>
+          <a class="live-link" href="https://github.com/Bhatowais454/Novelty-Arts-Emporium.git" target="_blank">🐙 GitHub Repo</a>
+        </div>
+        <ul>
+          <li>Full enterprise monorepo (Node/TS/PostgreSQL + React Native Expo) featuring an E-Commerce web storefront, billing ERP, and double-entry inventory ledger.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header">
+          <div class="job-title">2. PomoVerse E-Nursery — Production E-Commerce Web Application</div>
+        </div>
+        <div style="margin-bottom: 0.15rem;">
+          <a class="live-link" href="https://pomoverse0-nine.vercel.app/" target="_blank">🌐 Live Web Application</a>
+          <a class="live-link" href="https://github.com/Bhatowais/PomoVerse_Frontend.git" target="_blank">🐙 GitHub Repo</a>
+        </div>
+        <ul>
+          <li>Full-stack React 19 + Express 5 + PostgreSQL e-commerce app with Redis sub-20ms query caching and Cloudinary media upload pipelines.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header">
+          <div class="job-title">3. University Web3 Academic Credentials DApp</div>
+        </div>
+        <div style="margin-bottom: 0.15rem;">
+          <a class="live-link" href="https://github.com/Bhatowais454/Eductational-Dapp.git" target="_blank">🐙 GitHub Contract Code</a>
+        </div>
+        <ul>
+          <li>Decentralized academic credential platform issuing student degrees as ERC-721 NFTs on Sepolia testnet using Hardhat 3 and IPFS indexing.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Education & Certifications</h2>
+      <div class="job" style="margin-bottom: 0.35rem;">
+        <div class="job-header">
+          <div><span class="job-title">Master of Science in Information Technology (MSc IT)</span> — <span class="job-company">University of Kashmir</span></div>
+          <div class="job-date">2022 – 2024</div>
+        </div>
+        <ul>
+          <li>Advanced coursework in Design & Analysis of Algorithms, Cryptography & Network Security, Distributed Databases, and Enterprise Software Engineering.</li>
+        </ul>
+      </div>
+
+      <div class="job" style="margin-bottom: 0.35rem;">
+        <div class="job-header">
+          <div><span class="job-title">Bachelor of Science in Computer Science (B.Sc. CS)</span> — <span class="job-company">Govt Degree College Boys</span></div>
+          <div class="job-date">2017 – 2021</div>
+        </div>
+        <ul>
+          <li>Core foundational study of Data Structures, Operating Systems, Computer Architecture, Mathematics, and Object-Oriented Programming.</li>
+        </ul>
+      </div>
+
+      <div class="job" style="margin-bottom: 0;">
+        <div class="job-header">
+          <div><span class="job-title">6-Month Professional Certification in Computer Hardware & Diagnostic Systems</span></div>
+          <div class="job-date">Certified Technician</div>
+        </div>
+        <ul>
+          <li>Hands-on training in motherboard diagnostics, PC component assembly, peripheral repair, network physical layer, and system troubleshooting.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
