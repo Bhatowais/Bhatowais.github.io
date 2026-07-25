@@ -64,18 +64,6 @@ Proven track record founding **MON Labs** to architect enterprise software syste
 
 ---
 
-## 📂 REPOSITORY & WEB PORTFOLIO ARCHITECTURE
-
-```
-e:\Owais Resume\
-├── index.html        # Main Interactive Glassmorphic Web Portfolio & Project Order Form
-├── resume.html       # Single-Page ATS Printable Resume (A4 PDF Ready)
-├── Resume_Owais_Manzoor.md # Single-Page Executive Markdown Resume
-├── styles.css        # Glassmorphism Design System & Responsive Layouts
-├── script.js        # Particles Canvas, Filtering, Dynamic State Selector & WhatsApp Order API
-└── README.md         # Official Portfolio Repository & Developer Profile Documentation
-```
-
 ### ⚡ Key Web Portfolio Features:
 1. **Interactive Glassmorphic Interface:** Dark space design system (`#090d16`), animated glow orbs, and canvas particle background.
 2. **Direct WhatsApp Project Order Form (`#order`):** Complete project quote form with dynamic country-to-state dropdown selectors. Form submission automatically compiles order details and opens WhatsApp Web/Mobile pre-filled to **+91 9070505419**!
